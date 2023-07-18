@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+   background-image:url('https://cdn3.vectorstock.com/i/1000x1000/72/77/phishing-credit-card-concept-background-flat-vector-22367277.jpg');
+   background-size: 1280px 600px;
+   margin:0;
+}
+.b1 {
+  background-color: lightgreen;
+  height:50px;
+  width: 150px;
+}
+.v1 {
+	height: 50px;
+	width: 50px;
+}
+.v {
+	height: 50px;
+	width: 150px;
+}
+.v4 {
+  height: 350px;
+  width: 350px;
+}

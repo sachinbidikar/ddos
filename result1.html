@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <title>Register</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+<style type="text/css">
+    #example1 {
+   background-image:url("static/back.jpg");
+  background-repeat: no-repeat;
+  background-size: 100 100 ;
+}
+
+.table1{
+width:96vw;
+overflow:scroll;
+background:#FFF;
+margin:10px 30px;
+padding:3px 10px;
+}
+
+.table1 h3{
+text-align:center;
+font-size:30px;
+text-decoration:underline;
+}
+</style>
+</head>
+<body>
+<div style="position: absolute;top: 30px;">
+<h1 style="font-size:50px; color:blue; text-align:center;">DDOS ATTACK USING MACHINE LEARNING</h1>
+    <br>
+
+<div class="table1">
+{% if prediction %}
+    <h3> Input data</h3>
+<table class="table table-dark">
+    <tr class="bg-primary">
+        {% for i in i_cols %}
+        <th>{{ i }}</th>
+        {% endfor %}
+    </tr>
+
+        {% for value in i_values %}
+    <tr class="bg-success">
+            {% for i in value %}
+                <td class="bg-dark" style="">{{ i }}</td>
+            {% endfor %}
+           </tr>
+        {% endfor %}
+</table>
+
+      <h3>Output data</h3>
+    <table class="table table-dark">
+    <tr class="bg-primary">
+        {% for i in o_cols %}
+        <th>{{ i }}</th>
+        {% endfor %}
+    </tr>
+
+        {% for value in o_values %}
+    <tr class="bg-success">
+            {% for i in value %}
+                <td class="bg-dark" style="">{{ i }}</td>
+            {% endfor %}
+           </tr>
+        {% endfor %}
+</table>
+{% endif %}
+
+</div>
+<br>
+ <form action="\back">
+<div align="center">
+    <div class="b1">
+   <button class="b1" type="submit" height="100" width="300">Back</button>
+
+</div>
+</div>
+ </form>
+<br><br>
+  <form action="\logout">
+<div align="center">
+    <div class="b1">
+   <button class="b1" type="submit" height="100" width="300">Logout</button>
+
+</div>
+</div>
+ </form>
+
+</body>
+</html>
